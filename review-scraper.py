@@ -65,8 +65,11 @@ for c in ascii_lowercase:
 					fw.write('<title>%s</title>' %body.h2.get_text().encode('utf8'))
 					fw.write('<pros>%s</pros>\n' %ps[1].get_text().encode('utf8'))
 					fw.write('<cons>%s</cons>\n' %ps[2].get_text().encode('utf8'))
-					fw.write('<advice-to-management>%s</advice-to-management>\n' %ps[3].get_text().encode('utf8'))
-					fw.write('<recommended>%s</recommended>\n' %ps[4].get_text().split(',')[0].encode('utf8'))
+					try:
+						fw.write('<advice-to-management>%s</advice-to-management>\n' %ps[3].get_text().encode('utf8'))
+						fw.write('<recommended>%s</recommended>\n' %ps[4].get_text().split(',')[0].encode('utf8'))
+					except:
+						pass
 					fw.write('</review>\n\n')
 			fw.write('</reviews>')
 	except Exception,e:
