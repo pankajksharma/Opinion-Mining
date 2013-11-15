@@ -26,7 +26,8 @@ f = open("pros", "w")
 for k,v in pros.iteritems():
 	f.write(k.encode('utf8')+' '+str(v)+'\n')
 f.close()
-fc = open("cons", "w")
+
+f = open("cons", "w")
 for k,v in cons.iteritems():
 	f.write(k.encode('utf8')+' '+str(v)+'\n')
 f.close()
