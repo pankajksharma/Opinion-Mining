@@ -22,5 +22,5 @@ for l in dirlist[:len(dirlist)/3]:	#1/3 for training
 		update_occurences(cons, DataClean(review.cons.get_text()).getData())
 		update_occurences(pros, DataClean(review.pros.get_text()).getData())
 	f = open("processed-data/"+l.split('.')[0]+".json", "w")
-	f.write(json.dumps({"cons": cons, "pros" : cons}))
+	f.write(json.dumps({"cons": cons, "pros" : pros}))
 	f.close()
